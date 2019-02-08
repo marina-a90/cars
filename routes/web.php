@@ -18,6 +18,12 @@ Route::get('/', function () {
     return view('welcome', compact('name', 'age'));
 });
 
-Route::get('/about', function () {
+Route::get('about', function () {
     return view('additional.about');
 });
+
+// Route::get('view', function () {
+//     return view('additional.view', compact('cars'));
+// });
+
+Route::resource('cars', 'CarsController');

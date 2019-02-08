@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About</title>
+    <title>Car list</title>
 </head>
 <body>
-    <div>About us</div>
+    <ul>
+        @foreach($cars as $car)
+            <li>{{ $car->producer }} with {{ $car->number_of_doors }} doors</li>
+        @endforeach
+    </ul>
 </body>
 </html>
