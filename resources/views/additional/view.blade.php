@@ -9,7 +9,11 @@
 <body>
     <ul>
         @foreach($cars as $car)
-            <li>{{ $car->producer }} with {{ $car->number_of_doors }} doors</li>
+            <li>
+            <a href="{{ route('single-car', ['id' => $car->id]) }}">
+                {{ $car->producer }}
+            </a>
+            with {{ $car->number_of_doors }} doors</li>
         @endforeach
     </ul>
 </body>
