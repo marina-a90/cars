@@ -84,6 +84,10 @@
                 Welcome {{ $name }}!
                 </div>
 
+            <div>I am {{ $age }} years old!</div>
+
+            <hr>
+
                 <div class="links">
                     <a href="about">About</a>
                 </div>
