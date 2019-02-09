@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('about', function () {
     return view('additional.about');
-});
+})->name('about');
 
 // Route::get('view', function () {
 //     return view('additional.view', compact('cars'));
@@ -32,7 +32,7 @@ Route::get('about', function () {
 
 Route::resource('cars', 'CarsController');
 
-// Route::get('cars', 'CarsController@index');
+Route::get('cars', 'CarsController@index')->name('cars');
 // Route::get('cars/{id}', 'CarsController@show');
 
 Route::get('/cars/{id}', ['as' => 'single-car', function ($id) {
